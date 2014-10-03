@@ -1,10 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities;
+namespace PhpCommonUtilities\VariableHandling\Utilities;
 
 
-class IsEmpty {
+use PhpCommonUtilities\Utilities\VariableHandling\VariableHandling;
+
+class IsEmpty implements VariableHandling {
 
     /**
      * Returns true if any of the given values are empty. Otherwise returns false.
@@ -13,17 +15,17 @@ class IsEmpty {
      * @return bool
      */
     public static function any(){
-        $are_any_empty = false;
+        $are_any = false;
         $values = func_get_args();
 
         foreach($values as $value){
             if(empty($value)){
-                $are_any_empty = true;
+                $are_any = true;
                 break;
             }
         }
 
-        return $are_any_empty;
+        return $are_any;
     }
 
     /**
@@ -42,17 +44,17 @@ class IsEmpty {
      * @return bool
      */
     public static function all(){
-        $are_all_empty = true;
+        $are_all = true;
         $values = func_get_args();
 
         foreach($values as $value){
             if(!empty($value)){
-                $are_all_empty = false;
+                $are_all = false;
                 break;
             }
         }
 
-        return $are_all_empty;
+        return $are_all;
     }
 
     /**

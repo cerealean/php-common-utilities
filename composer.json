@@ -8,5 +8,8 @@
             "name"  : "Michael Crawford",
             "email" : "cerealean@me.com"
         }
-    ]
+    ],
+    "require" : {
+        "php" : ">=5.3"
+    }
 }

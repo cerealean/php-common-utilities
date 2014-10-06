@@ -1,10 +1,10 @@
 <?php
 
 
-namespace PhpCommonUtilities\VariableHandling\Utilities;
+namespace PhpCommonUtilities\Utilities\VariableHandling;
 
 
-use PhpCommonUtilities\Utilities\VariableHandling\VariableHandling;
+//use PhpCommonUtilities\Utilities\VariableHandling\VariableHandling;
 
 class IsEmpty implements VariableHandling {
 
@@ -35,7 +35,7 @@ class IsEmpty implements VariableHandling {
      * @return bool
      */
     public static function none(){
-        return !call_user_func_array("any", func_get_args());
+        return !call_user_func_array(__CLASS__.'::any', func_get_args());
     }
 
     /**

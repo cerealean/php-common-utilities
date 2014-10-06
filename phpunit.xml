@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php"
+         colors="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="cerealean/php-common-utilities">
+            <directory suffix="Test.php">test/**</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/**</directory>
+        </whitelist>
+        <blacklist>
+            vendor/**
+        </blacklist>
+    </filter>
+
+    <php>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+</phpunit>
+

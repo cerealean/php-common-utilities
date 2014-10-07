@@ -46,5 +46,37 @@ class IsEmptyTest extends \PHPUnit_Framework_TestCase {
         $this->assertInternalType($expected, $actual);
     }
 
+    public function test_noneShouldReturnTrueIfNoParametersPassed(){
+        $actual = IsEmpty::none();
+
+        $this->assertTrue($actual);
+    }
+
+    public function test_noneShouldReturnTrueIfVariablePassedIsNotEmpty(){
+        $test_var = 12345;
+
+        $actual = IsEmpty::none($test_var);
+
+        $this->assertTrue($actual);
+    }
+
+    public function test_noneShouldReturnFalseIfVariablePassedIsEmpty(){
+        $test_var = 0;
+
+        $actual = IsEmpty::none($test_var);
+
+        $this->assertFalse($actual);
+    }
+
+    public function test_noneShouldReturnFalseIfOneVariablePassedOutOfSeveralIsEmpty(){
+        $test_var = null;
+        $test_2 = "rawr";
+        $test_3 = [1,2,3,4];
+
+        $actual = IsEmpty::none($test_var, $test_2, $test_3);
+
+        $this->assertFalse($actual);
+    }
+
 }
  

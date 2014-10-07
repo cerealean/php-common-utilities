@@ -71,7 +71,7 @@ class IsEmptyTest extends \PHPUnit_Framework_TestCase {
     public function test_noneShouldReturnFalseIfOneVariablePassedOutOfSeveralIsEmpty(){
         $test_var = null;
         $test_2 = "rawr";
-        $test_3 = [1,2,3,4];
+        $test_3 = array(1,2,3,4);
 
         $actual = IsEmpty::none($test_var, $test_2, $test_3);
 

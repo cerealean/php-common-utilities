@@ -4,7 +4,6 @@
 namespace PhpCommonUtilities\Utilities\VariableHandling;
 
 
-//use PhpCommonUtilities\Utilities\VariableHandling\VariableHandling;
 
 class IsEmpty implements VariableHandling {
 

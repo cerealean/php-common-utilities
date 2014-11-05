@@ -55,7 +55,7 @@ class IsString implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is a string. Otherwise returns false. Simple OOP wrapper for the PHP native empty function.
+     * Returns true if the given value is a string. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool

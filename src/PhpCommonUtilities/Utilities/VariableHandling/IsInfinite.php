@@ -55,7 +55,7 @@ class IsInfinite implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is infinite. Otherwise returns false. Simple OOP wrapper for the PHP native empty function.
+     * Returns true if the given value is infinite. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool

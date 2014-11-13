@@ -4,7 +4,7 @@
 namespace PhpCommonUtilities\Test\Utilities\VariableHandling;
 
 
-use PhpCommonUtilities\Utilities\VariableHandling\IsEmpty;
+use PhpCommonUtilities\VariableHandling\IsEmpty;
 
 class IsEmptyTest extends \PHPUnit_Framework_TestCase {
 

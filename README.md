@@ -5,6 +5,18 @@ php-common-utilities
 
 This package uses a variadic wrapper functions for core PHP functionality to make calls to those functions easier, cleaner, and reduce duplication. Please see the examples below.
 
+Author
+------
+- Michael Crawford
+- cerealean@me.com
+- github.com/cerealean
+
+Installation Instructions
+-------------------------
+
+###Using Composer
+Simply add `cerealean/php-common-utilities : 1.0.*` to your composer.json file. For more information on composer, please go [here](https://getcomposer.org/).
+
 Examples
 --------
 
@@ -87,7 +99,7 @@ Currently Supported Functionality
 - IsArray
 - IsBool
 - IsCallable
-- IsDeclared *(different name for **[isset](http://php.net/manual/en/function.isset.php)** in core functionality)*
+- IsDeclared *(different name for [isset](http://php.net/manual/en/function.isset.php) in core functionality)*
 - IsDouble
 - IsEmpty
 - IsFile

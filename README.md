@@ -8,7 +8,6 @@ This package uses a variadic wrapper functions for core PHP functionality to mak
 Author
 ------
 - Michael Crawford
-- cerealean@me.com
 - github.com/cerealean
 
 Installation Instructions
@@ -16,6 +15,9 @@ Installation Instructions
 
 ###Using Composer
 Simply add `cerealean/php-common-utilities : 1.0.*` to your composer.json file. For more information on composer, please go [here](https://getcomposer.org/).
+
+###Packagist
+You can view all of the versions of this package on Packagist [here](https://packagist.org/packages/cerealean/php-common-utilities).
 
 Examples
 --------

@@ -1,12 +1,14 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsFinite implements VariableHandling {
+
+class IsEmpty implements VariableHandling {
+
     /**
-     * Returns true if any of the given values are finite. Otherwise returns false.
+     * Returns true if any of the given values are empty. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +18,7 @@ class IsFinite implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_finite($value)){
+            if(empty($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +28,7 @@ class IsFinite implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are finite. Otherwise returns false.
+     * Returns true if none of the given values are empty. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +38,7 @@ class IsFinite implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are finite. Otherwise returns false.
+     * Returns true if all of the given values are empty. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +47,7 @@ class IsFinite implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_finite($value)){
+            if(!empty($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +57,14 @@ class IsFinite implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is finite. Otherwise returns false.
+     * Returns true if the given value is empty. Otherwise returns false. Simple OOP wrapper for the PHP native empty function.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_finite($value);
+        return empty($value);
     }
+
 }
  

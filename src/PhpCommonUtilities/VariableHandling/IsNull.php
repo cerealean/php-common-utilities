@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsFloat implements VariableHandling {
+class IsNull implements VariableHandling {
     /**
-     * Returns true if any of the given values are floats. Otherwise returns false.
+     * Returns true if any of the given values are null. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsFloat implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_float($value)){
+            if(is_null($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsFloat implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are floats. Otherwise returns false.
+     * Returns true if none of the given values are null. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsFloat implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are floats. Otherwise returns false.
+     * Returns true if all of the given values are null. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsFloat implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_float($value)){
+            if(!is_null($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +55,13 @@ class IsFloat implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is a float. Otherwise returns false.
+     * Returns true if the given value is null. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_float($value);
+        return is_null($value);
     }
 }
  

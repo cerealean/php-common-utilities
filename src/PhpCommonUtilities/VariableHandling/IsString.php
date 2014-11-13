@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsNumeric implements VariableHandling {
+class IsString implements VariableHandling {
     /**
-     * Returns true if any of the given values are numeric. Otherwise returns false.
+     * Returns true if any of the given values are strings. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsNumeric implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_numeric($value)){
+            if(is_string($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsNumeric implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are numeric. Otherwise returns false.
+     * Returns true if none of the given values are strings. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsNumeric implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are numeric. Otherwise returns false.
+     * Returns true if all of the given values are strings. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsNumeric implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_numeric($value)){
+            if(!is_string($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +55,13 @@ class IsNumeric implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is numeric. Otherwise returns false.
+     * Returns true if the given value is a string. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_numeric($value);
+        return is_string($value);
     }
 }
  

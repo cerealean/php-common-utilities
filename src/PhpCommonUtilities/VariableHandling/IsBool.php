@@ -1,13 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsFile implements VariableHandling {
-
+class IsBool implements VariableHandling {
     /**
-     * Returns true if any of the given values are files. Otherwise returns false.
+     * Returns true if any of the given values are booleans. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -17,7 +16,7 @@ class IsFile implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_file($value)){
+            if(is_bool($value)){
                 $are_any = true;
                 break;
             }
@@ -27,7 +26,7 @@ class IsFile implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are files. Otherwise returns false.
+     * Returns true if none of the given values are booleans. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -37,7 +36,7 @@ class IsFile implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are files. Otherwise returns false.
+     * Returns true if all of the given values are booleans. Otherwise returns false.
      *
      * @return bool
      */
@@ -46,7 +45,7 @@ class IsFile implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_file($value)){
+            if(!is_bool($value)){
                 $are_all = false;
                 break;
             }
@@ -56,14 +55,13 @@ class IsFile implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is a file. Otherwise returns false.
+     * Returns true if the given value is a boolean. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_file($value);
+        return is_bool($value);
     }
-
 }
  

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsDeclared implements VariableHandling {
+class IsCallable implements VariableHandling {
     /**
-     * Returns true if any of the given values are set. Otherwise returns false.
+     * Returns true if any of the given values are callable. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsDeclared implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(isset($value)){
+            if(is_callable($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsDeclared implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are set. Otherwise returns false.
+     * Returns true if none of the given values are callable. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsDeclared implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are set. Otherwise returns false.
+     * Returns true if all of the given values are callable. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsDeclared implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!isset($value)){
+            if(!is_callable($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +55,15 @@ class IsDeclared implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is set. Otherwise returns false.
+     * Returns true if the given value is callable. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return isset($value);
+        return is_callable($value);
     }
+
+
 }
  

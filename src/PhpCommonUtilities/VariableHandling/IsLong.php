@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsResource implements VariableHandling {
+class IsLong implements VariableHandling {
     /**
-     * Returns true if any of the given values are resources. Otherwise returns false.
+     * Returns true if any of the given values are longs. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsResource implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_resource($value)){
+            if(is_long($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsResource implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are resources. Otherwise returns false.
+     * Returns true if none of the given values are longs. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsResource implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are resources. Otherwise returns false.
+     * Returns true if all of the given values are longs. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsResource implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_resource($value)){
+            if(!is_long($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +55,13 @@ class IsResource implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is a resource. Otherwise returns false.
+     * Returns true if the given value is a long. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_resource($value);
+        return is_long($value);
     }
 }
  

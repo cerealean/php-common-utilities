@@ -1,14 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-
-class IsEmpty implements VariableHandling {
-
+class IsNumeric implements VariableHandling {
     /**
-     * Returns true if any of the given values are empty. Otherwise returns false.
+     * Returns true if any of the given values are numeric. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -18,7 +16,7 @@ class IsEmpty implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(empty($value)){
+            if(is_numeric($value)){
                 $are_any = true;
                 break;
             }
@@ -28,7 +26,7 @@ class IsEmpty implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are empty. Otherwise returns false.
+     * Returns true if none of the given values are numeric. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -38,7 +36,7 @@ class IsEmpty implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are empty. Otherwise returns false.
+     * Returns true if all of the given values are numeric. Otherwise returns false.
      *
      * @return bool
      */
@@ -47,7 +45,7 @@ class IsEmpty implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!empty($value)){
+            if(!is_numeric($value)){
                 $are_all = false;
                 break;
             }
@@ -57,14 +55,13 @@ class IsEmpty implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is empty. Otherwise returns false. Simple OOP wrapper for the PHP native empty function.
+     * Returns true if the given value is numeric. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return empty($value);
+        return is_numeric($value);
     }
-
 }
  

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsDouble implements VariableHandling {
+class IsFinite implements VariableHandling {
     /**
-     * Returns true if any of the given values are doubles. Otherwise returns false.
+     * Returns true if any of the given values are finite. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsDouble implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_double($value)){
+            if(is_finite($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsDouble implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are doubles. Otherwise returns false.
+     * Returns true if none of the given values are finite. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsDouble implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are doubles. Otherwise returns false.
+     * Returns true if all of the given values are finite. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsDouble implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_double($value)){
+            if(!is_finite($value)){
                 $are_all = false;
                 break;
             }
@@ -55,14 +55,13 @@ class IsDouble implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is a double. Otherwise returns false.
+     * Returns true if the given value is finite. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_double($value);
+        return is_finite($value);
     }
-
 }
  

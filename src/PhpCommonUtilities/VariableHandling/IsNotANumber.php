@@ -1,12 +1,12 @@
 <?php
 
 
-namespace PhpCommonUtilities\Utilities\VariableHandling;
+namespace PhpCommonUtilities\VariableHandling;
 
 
-class IsArray implements VariableHandling {
+class IsNotANumber implements VariableHandling {
     /**
-     * Returns true if any of the given values are arrays. Otherwise returns false.
+     * Returns true if any of the given values are NaN. Otherwise returns false.
      *
      * @param mixed ... values
      * @return bool
@@ -16,7 +16,7 @@ class IsArray implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(is_array($value)){
+            if(is_nan($value)){
                 $are_any = true;
                 break;
             }
@@ -26,7 +26,7 @@ class IsArray implements VariableHandling {
     }
 
     /**
-     * Returns true if none of the given values are arrays. Otherwise returns false.
+     * Returns true if none of the given values are NaN. Otherwise returns false.
      *
      * @param mixed... values
      * @return bool
@@ -36,7 +36,7 @@ class IsArray implements VariableHandling {
     }
 
     /**
-     * Returns true if all of the given values are arrays. Otherwise returns false.
+     * Returns true if all of the given values are NaN. Otherwise returns false.
      *
      * @return bool
      */
@@ -45,7 +45,7 @@ class IsArray implements VariableHandling {
         $values = func_get_args();
 
         foreach($values as $value){
-            if(!is_array($value)){
+            if(!is_nan($value)){
                 $are_all = false;
                 break;
             }
@@ -55,13 +55,13 @@ class IsArray implements VariableHandling {
     }
 
     /**
-     * Returns true if the given value is an array. Otherwise returns false.
+     * Returns true if the given value is NaN. Otherwise returns false.
      *
      * @param mixed $value
      * @return bool
      */
     public static function value($value){
-        return is_array($value);
+        return is_nan($value);
     }
 }
  

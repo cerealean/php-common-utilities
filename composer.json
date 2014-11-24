@@ -3,6 +3,7 @@
     "description"       : "Commonly used core PHP functionality improved upon and made for quick, easy use",
     "minimum-stability" : "dev",
     "license"           : "MIT",
+    "keywords"          : ["php","common","functionality","core","wrapper","empty","variadic","utility","utilities"],
     "authors"           : [
         {
             "name"  : "Michael Crawford",

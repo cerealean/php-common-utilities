@@ -2,6 +2,7 @@ php-common-utilities
 ====================
 
 [![Build Status](https://travis-ci.org/cerealean/php-common-utilities.svg?branch=master)](https://travis-ci.org/cerealean/php-common-utilities) [![Latest Stable Version](https://poser.pugx.org/cerealean/php-common-utilities/v/stable.svg)](https://packagist.org/packages/cerealean/php-common-utilities) [![Total Downloads](https://poser.pugx.org/cerealean/php-common-utilities/downloads.svg)](https://packagist.org/packages/cerealean/php-common-utilities) [![License](https://poser.pugx.org/cerealean/php-common-utilities/license.svg)](https://packagist.org/packages/cerealean/php-common-utilities)
+[![Dependency Status](https://www.versioneye.com/user/projects/54ecf43b78b4605a75000011/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54ecf43b78b4605a75000011)
 
 This package uses a variadic wrapper functions for core PHP functionality to make calls to those functions easier, cleaner, and reduce duplication. Please see the examples below.
 
